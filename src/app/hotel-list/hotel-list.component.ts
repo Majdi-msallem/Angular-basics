@@ -51,7 +51,7 @@ export class HotelListComponent implements OnInit {
     public filteredHotels : IHotel[] =[];
     ngOnInit(): void {
       this.filteredHotels = this.hotels;
-      this.hotelFilter ='mot';
+      this.hotelFilter ='';
       }
 
     public toggleIsNewBaadge(): void {

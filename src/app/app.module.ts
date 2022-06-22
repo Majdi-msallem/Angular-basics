@@ -5,6 +5,7 @@ import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { ReplaceComma } from './shared/pipes/replace-comma.pipe';
 
 
 registerLocaleData(localeFr,'fr');
@@ -12,7 +13,8 @@ registerLocaleData(localeFr,'fr');
 @NgModule({
   declarations: [
     AppComponent,
-    HotelListComponent
+    HotelListComponent,
+    ReplaceComma
   ],
   imports: [
     BrowserModule,
