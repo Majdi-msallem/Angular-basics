@@ -47,13 +47,35 @@ export class HotelListComponent implements OnInit {
     ;
 
     public showBadge !:boolean ;
-    public hotelFilter = 'mot';
-
+    private  _hotelFilter = 'mot';
+    public filteredHotels : IHotel[] =[];
     ngOnInit(): void {
-console.log('mon niveau de  vie initial fonctionne')}
+      this.filteredHotels = this.hotels;
+      this.hotelFilter ='mot';
+      }
 
     public toggleIsNewBaadge(): void {
         this.showBadge=!this.showBadge;
     }
 
+
+
+  public get hotelFilter():string {
+      return  this._hotelFilter;
+  }
+
+  public set  hotelFilter(filter:string){
+      this._hotelFilter = filter ;
+      this.filteredHotels = this.hotelFilter ? this.filterHotels(this.hotelFilter) : this.hotels;
+  }
+   
+  private filterHotels(criteria : string): IHotel[] {
+      criteria = criteria.toLocaleLowerCase();
+
+      const res = this.hotels.filter(
+      (hotel: IHotel) => hotel.hotelName.toLocaleLowerCase().lastIndexOf(criteria)!= -1
+            );
+            return res;
+  }
+  
 }
