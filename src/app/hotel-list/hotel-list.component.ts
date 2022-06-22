@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IHotel } from './hotel';
 
 @Component({
     selector : 'app-hotel-list',
@@ -6,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class HotelListComponent {
     public title ='liste   hotels ' ;
-    public hotels  :any[] =[{
+    public hotels  :IHotel[] =[{
         
 
                   "hotelId": 1,
@@ -14,7 +15,7 @@ export class HotelListComponent {
                   "description": "Belle vue au bord de la mer",
                   "price": 230.5,
                   "imageUrl": "assets/img/hotel-room.jpg",
-                  "rating": 3.5
+                  // "rating": 3.5
             },
             {
                   "hotelId": 2,
@@ -22,7 +23,7 @@ export class HotelListComponent {
                   "description": "Profitez de la vue sur les montagnes",
                   "price": 145.5,
                   "imageUrl": "assets/img/the-interior.jpg",
-                  "rating": 5
+                  // "rating": 5
             },
             {
                   "hotelId": 3,
@@ -30,7 +31,7 @@ export class HotelListComponent {
                   "description": "Séjour complet avec service de voitures",
                   "price": 120.12,
                   "imageUrl": "assets/img/indoors.jpg",
-                  "rating": 4
+                  // "rating": 4
             },
             {
                   "hotelId": 4,
@@ -38,7 +39,7 @@ export class HotelListComponent {
                   "description": "Magnifique cadre pour votre séjour",
                   "price": 135.12,
                   "imageUrl": "assets/img/window.jpg",
-                  "rating": 2.5
+                  // "rating": 2.5
             }
           ]
     ;
